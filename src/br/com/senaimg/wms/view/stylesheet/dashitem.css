@@ -1,0 +1,7 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#itemPane{
+    -fx-background-color: linear-gradient(to right, #F29B12, #d4b020);
+}

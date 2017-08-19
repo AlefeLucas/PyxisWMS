@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<StackPane fx:id="rootPane" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.UserManualController">
+     <stylesheets>
+        <URL value="@/br/com/senaimg/wms/view/stylesheet/usermanual.css" />
+    </stylesheets>
+   <children>
+      <BorderPane>
+         <bottom>
+            <HBox fx:id="footerPane" spacing="3.0" styleClass="footerPane" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox fx:id="showStartupCheckBox" mnemonicParsing="false" selected="true" text="Show Tips on Startup" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="previousButton" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#previousHandle" text="Previous" />
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextHandle" text="Next" />
+                  <Button fx:id="closeButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeHandle" text="Close" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <top>
+            <HBox fx:id="headerPane" alignment="CENTER_LEFT" spacing="10.0" styleClass="headerPane" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="tipIcon" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tips.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="titleLabel" text="Did you know?">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

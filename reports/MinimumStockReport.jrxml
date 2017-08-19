@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2016-05-23T14:14:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MinimumStockReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a8788ac-0cae-4aa3-9381-c9f0539b9fc6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
+	</field>
+	<field name="totalProfit" class="java.lang.String">
+		<fieldDescription><![CDATA[totalProfit]]></fieldDescription>
+	</field>
+	<field name="totalCosts" class="java.lang.String">
+		<fieldDescription><![CDATA[totalCosts]]></fieldDescription>
+	</field>
+	<field name="length" class="java.lang.String">
+		<fieldDescription><![CDATA[length]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="ean13" class="java.lang.String">
+		<fieldDescription><![CDATA[ean13]]></fieldDescription>
+	</field>
+	<field name="weight" class="java.lang.String">
+		<fieldDescription><![CDATA[weight]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[type]]></fieldDescription>
+	</field>
+	<field name="avgIndividualProfit" class="java.lang.String">
+		<fieldDescription><![CDATA[avgIndividualProfit]]></fieldDescription>
+	</field>
+	<field name="sellingPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[sellingPrice]]></fieldDescription>
+	</field>
+	<field name="totalSellingPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[totalSellingPrice]]></fieldDescription>
+	</field>
+	<field name="width" class="java.lang.String">
+		<fieldDescription><![CDATA[width]]></fieldDescription>
+	</field>
+	<field name="maximum" class="java.lang.String">
+		<fieldDescription><![CDATA[maximum]]></fieldDescription>
+	</field>
+	<field name="mnemonic" class="java.lang.String">
+		<fieldDescription><![CDATA[mnemonic]]></fieldDescription>
+	</field>
+	<field name="profitMargin" class="java.lang.String">
+		<fieldDescription><![CDATA[profitMargin]]></fieldDescription>
+	</field>
+	<field name="avgCost" class="java.lang.String">
+		<fieldDescription><![CDATA[avgCost]]></fieldDescription>
+	</field>
+	<field name="brand" class="java.lang.String">
+		<fieldDescription><![CDATA[brand]]></fieldDescription>
+	</field>
+	<field name="caution" class="java.lang.String">
+		<fieldDescription><![CDATA[caution]]></fieldDescription>
+	</field>
+	<field name="minimum" class="java.lang.String">
+		<fieldDescription><![CDATA[minimum]]></fieldDescription>
+	</field>
+	<field name="operation" class="java.lang.String">
+		<fieldDescription><![CDATA[operation]]></fieldDescription>
+	</field>
+	<field name="group" class="java.lang.String">
+		<fieldDescription><![CDATA[group]]></fieldDescription>
+	</field>
+	<field name="height" class="java.lang.String">
+		<fieldDescription><![CDATA[height]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="100" backcolor="#323232" uuid="2d1a6d3c-ba5e-42b3-b973-e34380f07c43">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<image>
+					<reportElement x="370" y="0" width="180" height="60" uuid="c2748da3-24b1-4552-9abf-e932a574ff23"/>
+					<imageExpression><![CDATA["src/br/com/senaimg/wms/view/images/pyxis256.png"]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="9" y="69" width="120" height="30" forecolor="#FFFFFF" uuid="61f9743c-08ed-4f52-9c7d-79f2c91abf38"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="3" y="0" width="280" height="69" forecolor="#FFFFFF" uuid="fd81d6ab-c88e-426d-97c5-4e5b9255b9a8"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="29" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Quantidade Mínima]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="0" y="0" width="80" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="140" y="0" width="180" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="320" y="0" width="70" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantidade em Estoque]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="390" y="0" width="65" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantidade Mínima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="80" y="0" width="60" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="455" y="0" width="100" height="30" forecolor="#000000" backcolor="#DAA520" uuid="c85bc6cb-7c62-46fd-94b4-f191d735d850">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código de Barras]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement mode="Opaque" x="455" y="0" width="100" height="30" backcolor="#E3E3E3" uuid="26971388-0ad3-4537-992c-e5eddbbf6948"/>
+				<box>
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="30" backcolor="#E3E3E3" uuid="17c5a096-623f-4ea9-a2ef-9c2969b6068b"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mnemonic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="60" height="30" backcolor="#E3E3E3" uuid="43918634-fac1-4326-a1f7-998f8be0bfb5"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="140" y="0" width="180" height="30" backcolor="#E3E3E3" uuid="fc797230-4906-410f-b9d5-7f83e28222df"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="320" y="0" width="70" height="30" backcolor="#E3E3E3" uuid="a18b8c58-85a7-425f-b405-07d82a1e653b"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="390" y="0" width="65" height="30" backcolor="#E3E3E3" uuid="bfef21bd-37b0-460b-a44b-e72e4f404817"/>
+				<box padding="0">
+					<topPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minimum}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="460" y="0" width="90" height="30" uuid="eb9fd213-b40c-4d84-817f-26c614c7e449">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<jr:EAN13 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$F{ean13}]]></jr:codeExpression>
+				</jr:EAN13>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="40" forecolor="#FFFFFF" backcolor="#323232" uuid="4ed325ab-daba-4649-b801-ab3c6edaa406">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textField>
+					<reportElement x="390" y="10" width="100" height="30" forecolor="#FFFFFF" uuid="7dbc6147-b355-4207-bafc-423503beda3b"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="490" y="10" width="60" height="30" forecolor="#FFFFFF" uuid="de6443aa-c418-4d87-b444-14a8584b74f7"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="10" width="100" height="30" forecolor="#FFFFFF" uuid="dec40d4b-6f34-4455-bdc4-4c7374f99c00"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<text><![CDATA[Pyxis WMS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

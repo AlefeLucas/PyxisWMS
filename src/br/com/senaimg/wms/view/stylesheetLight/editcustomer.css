@@ -1,0 +1,142 @@
+#rootPane, .root{
+     -fx-background-color: #f0f0f0;     
+    -fx-base: #f0f0f0;
+}
+
+.button:disabled{
+    -fx-base: #f0f0f0;
+    -fx-background-color: transparent;
+    -fx-border-color: #b0b0b0;
+    -fx-border-radius: 5;
+    
+}
+
+.combo-box .text-input{
+    -fx-base: #f0f0f0;
+}
+.radio-button{
+    -fx-base: #999999;
+    -fx-text-fill: #f0f0f0;
+}
+.combo-box, .column-header-background, .button{
+     -fx-base: #0b8bb7;     
+}
+.combo-box-popup{    
+    -fx-base: #f0f0f0;
+}
+
+.context-menu{
+    -fx-base: #f0f0f0;    
+}
+.tooltip{    
+    -fx-text-fill: #0b8bb7;  
+    -fx-background-color: #ffffffdd;
+}
+.scroll-pane > .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane, #rootTabPane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal{
+    -fx-base: #0b8bb7;
+    -fx-background-color: #f0f0f0;
+}
+
+
+.scroll-bar:vertical{
+    -fx-base: #0b8bb7;
+    -fx-background-color: #f0f0f0;
+
+}
+
+
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 4;
+
+
+}
+
+.scroll-bar:vertical .increment-arrow, .scroll-bar:vertical .decrement-arrow{
+    -fx-shape: " ";
+    -fx-padding:  2;
+}
+
+
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 10 0 4 0;   
+}
+
+
+.scroll-bar:horizontal .increment-arrow, .scroll-bar:horizontal .decrement-arrow{
+    -fx-shape: " ";
+    -fx-padding:  2;    
+}
+
+
+#footPane{    
+    -fx-border-width: 1;
+    -fx-border-color:  #b0b0b0 transparent  transparent transparent;
+    -fx-background-color: #f0f0f0;
+}
+
+#titlePane{    
+    -fx-border-width: 1;
+    -fx-border-color:  transparent transparent  #b0b0b0 transparent;
+        -fx-background-color: #f0f0f0;
+}
+
+#centerPane{
+    -fx-background-color: lightgrey;
+}
+
+#formGridPaneAddress{
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 1;
+}
+
+
+.check-box>*.box{
+	-fx-background-color: #606060;
+	-fx-pref-height: 20;
+	-fx-pref-width: 40;
+	-fx-background-radius: 100; /* Full round corner */
+	-fx-background-insets: 2.5;
+	-fx-padding:0;
+}
+.check-box:selected>*.box{
+	-fx-background-color: derive(#A67D18, 0.2);
+}
+
+.check-box:disabled>*.box{
+	-fx-background-color: derive(grey, 0.54);
+}
+
+
+.check-box >*.box>*.mark {
+	-fx-background-color: grey;
+	-fx-padding:0;
+	-fx-background-insets: 0;
+	-fx-shape: "M 10.5,0 C 4.7010101,0 0,4.7010101 0,10.5 0,16.29899 4.7010101,21 10.5,21 16.29899,21 21,16.29899 21,10.5 21,4.7010101 16.29899,0 10.5,0 Z m 29.455078,10.6875 0,0.134766 0.08984,0 0,-0.134766 z";
+	-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+}
+
+.check-box:selected>*.box>*.mark {
+	-fx-background-color: #0b8bb7;
+	-fx-shape: "M 10,5 c 5.79899,0 10.5,4.701 10.5,10.5 0,5.799 -4.70101,10.5 -10.5,10.5 -5.79899,0 -10.5,-4.701 -10.5,-10.5 0,-5.799 4.70101,-10.5 10.5,-10.5 z m -29.455078,10.6875 0,0.1348 -0.08984,0 0,-0.1348 z";
+}
+
+.check-box:indeterminate>*.box>*.mark {
+	-fx-background-color: #0b8bb7;
+	-fx-shape: "M 20 0 C 14.20101 0 9.5 4.701 9.5 10.5 C 9.5 16.299 14.20101 21 20 21 C 25.79899 21 30.5 16.299 30.5 10.5 C 30.5 4.701 25.79899 0 20 0 z M 0 10.6875 L 0 10.822266 L 0.08984375 10.822266 L 0.08984375 10.6875 L 0 10.6875 z M 40.066406 10.900391 A 0.080000006 0.050000001 0 0 0 40 10.949219 A 0.080000006 0.050000001 0 0 0 40.080078 11 A 0.080000006 0.050000001 0 0 0 40.160156 10.949219 A 0.080000006 0.050000001 0 0 0 40.080078 10.900391 A 0.080000006 0.050000001 0 0 0 40.066406 10.900391 z ";
+}
+
+.check-box:disabled>*.box>*.mark {
+	-fx-background-color: darkgray;
+}

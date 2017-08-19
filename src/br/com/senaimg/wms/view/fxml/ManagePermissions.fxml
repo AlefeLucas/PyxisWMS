@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootTabPane" fx:id="rootTabPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.ManagePermissionsController">
+   <stylesheets>
+              <URL value="@/br/com/senaimg/wms/view/stylesheet/managepermissions.css" />
+          </stylesheets>
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox fx:id="leftVBoxPane" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane hgap="5.0" layoutX="20.0" layoutY="20.0" minHeight="55.0" vgap="5.0">
+                     <children>
+                        <Label fx:id="label2" layoutX="10.0" layoutY="17.0" text="Profile name" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="profileComboBox" maxWidth="1.7976931348623157E308" onAction="#profileComboBoxHandle" promptText="Select a Profile" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <TextField fx:id="profileNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <tooltip>
+                              <Tooltip fx:id="renameToolTip" autoHide="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <Label fx:id="label1" text="Select a profile" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="115.0" />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Separator layoutX="10.0" layoutY="140.0" prefWidth="200.0" />
+                  <GridPane hgap="5.0" minHeight="30.0" vgap="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="label3" layoutX="10.0" layoutY="17.0" text="Create a new profile" />
+                        <TextField fx:id="profileTextField" GridPane.columnIndex="1">
+                           <tooltip>
+                              <Tooltip fx:id="newProfileToolTip" autoHide="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip></TextField>
+                        <Button fx:id="newProfileButton" mnemonicParsing="false" onAction="#newProfileButtonHandle" text="Create" GridPane.columnIndex="2" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+                  <VBox>
+                     <children>
+                        <Label fx:id="label4" text="Users" />
+                        <ListView fx:id="usersListView" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="centerStackPane" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableViewPermissions">
+                    <columns>
+                        <TableColumn fx:id="tableColumnGroup" prefWidth="95.0" text="Group" />
+                      <TableColumn fx:id="tableColumnFunction" prefWidth="95.0" text="Functionality" />
+                        <TableColumn fx:id="tableColumnVisible" prefWidth="35.0" text="Visible" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </StackPane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonHandle" text="Delete">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="modifyButton" layoutX="853.0" layoutY="15.0" mnemonicParsing="false" onAction="#modifyButtonHandle" text="Update">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

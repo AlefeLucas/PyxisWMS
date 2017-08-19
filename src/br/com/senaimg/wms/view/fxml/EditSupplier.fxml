@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootPane" fx:id="rootPane" minWidth="400.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../stylesheet/editsupplier.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.EditSupplierController">
+      
+    <stylesheets>
+        <URL value="@br/com/senaimg/wms/view/stylesheet/editsupplier.css" />
+    </stylesheets>
+   <children>
+      <VBox>
+         <children>
+            <StackPane id="titlePane" fx:id="titlePane">
+               <children>
+                  <Label fx:id="titleLabel" styleClass="titleLabel" text="Edit Supplier's data">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="2000.0" prefViewportWidth="800.0">
+               <content>
+                  <VBox fx:id="centerPane" minHeight="720.0">
+                     <children>
+                        <BorderPane>
+                           <center>
+                              <VBox maxWidth="480.0" BorderPane.alignment="CENTER_LEFT">
+                                 <children>
+                                    <GridPane id="formGridPane" fx:id="formGridPaneSupplier" BorderPane.alignment="TOP_LEFT">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="180.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label id="nameLabel" fx:id="nameLabel" text="Name:" />
+                                          <Label id="emailLabel" fx:id="mnemonicLabel" layoutX="10.0" layoutY="89.0" text="Mnemonic:" GridPane.rowIndex="1" />
+                                          <Label id="phoneLabel" fx:id="companyCodeLabel" layoutX="10.0" layoutY="262.0" text="Company code:" GridPane.rowIndex="2" />
+                                          <Label id="birthDateLabel" fx:id="taxLabel" layoutX="10.0" layoutY="435.0" text="Tax number:" GridPane.rowIndex="3">
+                                             <tooltip>
+                                                <Tooltip fx:id="taxTipToolTip" text="TAX_TIP">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font></Tooltip>
+                                             </tooltip></Label>
+                                          <Label id="genderLabel" fx:id="taxTypeLabel" layoutX="10.0" layoutY="184.0" text="Tax number type:" GridPane.rowIndex="4" />
+                                          <TextField fx:id="nameTextField" GridPane.columnIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="nameToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="mnemonicTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="mnemonicToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="companyCodeTextField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <tooltip>
+                                                <Tooltip fx:id="companyCodeToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="taxTextField" layoutX="169.0" layoutY="105.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <tooltip>
+                                                <Tooltip fx:id="taxToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="taxTypeTextField" layoutX="169.0" layoutY="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <tooltip>
+                                                <Tooltip fx:id="taxTypeToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <Label id="genderLabel" fx:id="statusLabel" layoutX="15.0" layoutY="135.0" text="Status:" GridPane.rowIndex="6" />
+                                          <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextArea fx:id="annotationTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <tooltip>
+                                                <Tooltip fx:id="annotationToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip></TextArea>
+                                          <Label id="genderLabel" fx:id="annotationLabel" layoutX="15.0" layoutY="141.0" text="Annotation:" GridPane.rowIndex="5" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="20.0" top="25.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <Label fx:id="addressTitle" text="Address">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane id="formGridPaneAddress" fx:id="formGridPaneAddress" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label id="usernameLabel" fx:id="addressLine1Label" layoutX="10.0" layoutY="236.0" text="Address line 1:" />
+                                          <Label id="passwordLabel" fx:id="addressLine2Label" layoutX="10.0" layoutY="288.0" text="Address line 2:" GridPane.rowIndex="1" />
+                                          <Label id="passwordConfirmLabel" fx:id="postalCodeLabel" layoutX="10.0" layoutY="340.0" text="Postal code:" GridPane.rowIndex="2" />
+                                          <Label id="secQuestionLabel" fx:id="countryLabel" layoutX="10.0" layoutY="392.0" text="Country:" GridPane.rowIndex="3" />
+                                          <TextField fx:id="addressLine1TextField" GridPane.columnIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="addressLine1ToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <Label id="genderLabel" fx:id="cityLabel" layoutX="35.0" layoutY="189.0" text="City:" GridPane.rowIndex="5" />
+                                          <ComboBox fx:id="countryComboBox" disable="true" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label id="secQuestionLabel" fx:id="stateLabel" layoutX="35.0" layoutY="305.0" text="State:" GridPane.rowIndex="4" />
+                                          <ComboBox fx:id="stateComboBox" disable="true" layoutX="169.0" layoutY="301.0" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <ComboBox fx:id="cityComboBox" disable="true" layoutX="169.0" layoutY="333.0" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="addressLine2TextField" layoutX="136.0" layoutY="19.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="addressLine2ToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="postalCodeTextField" layoutX="136.0" layoutY="49.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <tooltip>
+                                                <Tooltip fx:id="postalCodeToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="134.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <Label fx:id="contactTitle" layoutX="30.0" layoutY="205.0" text="Contact">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <GridPane id="formGridPaneAddress" fx:id="formGridPaneContact" layoutX="30.0" layoutY="232.0">
+                                       <children>
+                                          <Label id="usernameLabel" fx:id="phoneLabel" layoutX="10.0" layoutY="236.0" text="Phone number:" />
+                                          <Label id="passwordLabel" fx:id="phone2Label" layoutX="10.0" layoutY="288.0" text="Phone number 2:" GridPane.rowIndex="1" />
+                                          <Label id="passwordConfirmLabel" fx:id="faxLabel" layoutX="10.0" layoutY="340.0" text="Fax number:" GridPane.rowIndex="2" />
+                                          <Label id="secQuestionLabel" fx:id="emailLabel" layoutX="10.0" layoutY="392.0" text="Email:" GridPane.rowIndex="3" />
+                                          <TextField fx:id="phoneTextField" GridPane.columnIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="phoneToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="phone2TextField" layoutX="136.0" layoutY="19.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <tooltip>
+                                                <Tooltip fx:id="phone2ToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="faxTextField" layoutX="136.0" layoutY="49.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <tooltip>
+                                                <Tooltip fx:id="faxToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <TextField fx:id="emailTextField" layoutX="136.0" layoutY="79.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <tooltip>
+                                                <Tooltip fx:id="emailToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <Label id="secQuestionLabel" fx:id="webPageLabel" layoutX="16.0" layoutY="113.0" text="Web page:" GridPane.rowIndex="4" />
+                                          <TextField fx:id="webPageTextField" layoutX="136.0" layoutY="109.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <tooltip>
+                                                <Tooltip fx:id="webPageToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="134.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                                       </columnConstraints>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <right>
+                              <VBox fx:id="rightPane" alignment="TOP_CENTER" minHeight="440.0" prefWidth="300.0" styleClass="rightPane" BorderPane.alignment="TOP_CENTER">
+                                 <children>
+                                    <Label fx:id="imageLabel" text="Image" />
+                                    <Rectangle id="squareImage" fx:id="squareImage" arcHeight="5.0" arcWidth="5.0" fill="#949494" height="200.0" stroke="#ffffff00" strokeType="INSIDE" width="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Rectangle>
+                                    <Button id="selectImageButton" fx:id="selectImageButton" mnemonicParsing="false" onAction="#selectImageHandle" text="Select..." />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="25.0" top="25.0" />
+                                 </padding>
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                        <Region VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox id="footPane" fx:id="footPane" alignment="CENTER_RIGHT">
+               <children>
+                  <Button id="buttonClean" fx:id="buttonClean" mnemonicParsing="false" onAction="#cleanHandle" text="Clean" />
+                  <Button id="buttonRequestAccess" fx:id="buttonSaveSupplier" mnemonicParsing="false" onAction="#saveSupplierHandle" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

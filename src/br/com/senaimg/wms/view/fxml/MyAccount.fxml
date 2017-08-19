@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootTabPane" fx:id="rootPane" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../stylesheet/myaccount.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.MyAccountController">
+    <stylesheets>
+        <URL value="@br/com/senaimg/wms/view/stylesheet/myaccount.css" />
+    </stylesheets>
+    <children>
+        <BorderPane id="borderPane" fx:id="borderPane" prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <GridPane id="formGridPane" maxHeight="440.0" BorderPane.alignment="TOP_LEFT">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="68.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label id="nameLabel" fx:id="label1" text="Name:" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="emailLabel" fx:id="label2" layoutX="10.0" layoutY="89.0" text="Email:" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="phoneLabel" fx:id="label3" layoutX="10.0" layoutY="262.0" text="Phone:" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="birthDateLabel" fx:id="label4" layoutX="10.0" layoutY="435.0" text="Birth date:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="genderLabel" fx:id="label5" layoutX="10.0" layoutY="184.0" text="Gender:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="usernameLabel" fx:id="label6" layoutX="10.0" layoutY="236.0" text="Username:" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label id="secQuestionLabel" fx:id="label7" layoutX="10.0" layoutY="392.0" text="Security question:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="passwordLabel" layoutX="83.0" layoutY="142.0" text="Password:" visible="false" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                         <Label id="genderLabel" fx:id="label8" layoutX="35.0" layoutY="369.0" text="Profile:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="answerLabel" text="Answer:" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets right="5.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="nameTf" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <tooltip>
+                                <Tooltip fx:id="nameToolTip" autoHide="true">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </TextField>
+                        <TextField fx:id="emailTf" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <tooltip>
+                                <Tooltip fx:id="emailToolTip" autoHide="true">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </TextField>
+                        <TextField fx:id="phoneTf" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <tooltip>
+                                <Tooltip fx:id="phoneToolTip" autoHide="true">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </TextField>
+                        <TextField fx:id="usernameTf" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <tooltip>
+                                <Tooltip fx:id="usernameToolTip" autoHide="true">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                        </TextField>
+                        <TextField fx:id="secQuestionTf" disable="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                       
+                        <TextField fx:id="genderTf" disable="true" layoutX="169.0" layoutY="204.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="birthdateTf" disable="true" layoutX="190.0" layoutY="204.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="profileTf" disable="true" layoutX="504.0" layoutY="105.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePasswordAction" text="Change Password" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                
+                        <TextField fx:id="answerTf" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <tooltip>
+                        <Tooltip fx:id="answerToolTip" autoHide="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></TextField>
+                        <DatePicker fx:id="birthdateDp" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <tooltip>
+                                <Tooltip fx:id="birthdateToolTip" autoHide="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Tooltip>
+                            </tooltip>
+                        </DatePicker>
+                        <Button fx:id="editButton" mnemonicParsing="false" onAction="#editClicked" text="Edit..." GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteAccount" text="Delete Account" visible="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+                  <ComboBox fx:id="genderComboBox" layoutX="458.0" layoutY="138.0" prefWidth="150.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    </children>
+                    <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                    </padding>
+                </GridPane>
+            </center>
+            <top>
+                <StackPane id="titlePane" fx:id="titlePane" BorderPane.alignment="CENTER" />
+            </top>
+            <right>
+                <VBox fx:id="rightPane" alignment="TOP_CENTER" minHeight="440.0" prefHeight="470.0" prefWidth="300.0" styleClass="rightPane" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="usernameLabel" text="Username">
+                            <font>
+                                <Font name="Calibri Light" size="24.0" />
+                            </font>
+                        </Label>
+                        <Circle id="circleImage" fx:id="circleImage" fill="#ececec" radius="100.0" stroke="#ffffff00" strokeType="INSIDE">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Circle>
+                        <Button id="selectImageButton" fx:id="selectImageButton" mnemonicParsing="false" onAction="#selectImageHandle" text="Change profile pic..." visible="false" />
+                    </children>
+                    <padding>
+                        <Insets bottom="25.0" top="25.0" />
+                    </padding>
+                </VBox>
+            </right>
+        </BorderPane>
+    </children>
+   
+</StackPane>

@@ -1,0 +1,69 @@
+#backgroundPane1{
+    -fx-background-image: url(../images/warehouse10.png);    
+    -fx-background-size: 105% ;    
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#backgroundPane2{
+    -fx-background-image: url(../images/warehouse10.jpg);    
+    -fx-background-size: 105%;    
+    
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#rootPane{
+    -fx-background-color: black;
+}
+
+.combo-box, .column-header-background, .button{
+     -fx-base: #0b8bb7;     
+}
+.button:disabled{
+    -fx-base: #f0f0f0;
+    -fx-background-color: transparent;
+    -fx-border-color: #b0b0b0;
+    -fx-border-radius: 5;
+    
+}
+
+.combo-box-popup{    
+    -fx-base: #f0f0f0;
+}
+
+.context-menu{
+    -fx-base: #f0f0f0;    
+}
+
+
+
+#loginPane{
+    -fx-background-color: #000000aa;
+    -fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+
+}
+
+.buttonAll{    
+   
+    
+    -fx-base: #0b8bb7;
+          
+}
+
+
+
+
+#tfUser{
+    -fx-border-radius: 7 7 0 0;
+    -fx-background-radius: 10 10 0 0; 
+    
+    
+    
+}
+#pfPassword{
+    -fx-border-radius: 0 0 7 7;
+    -fx-background-radius: 0 0 10 10;     
+
+}

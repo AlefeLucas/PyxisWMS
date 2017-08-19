@@ -1,0 +1,46 @@
+#rootPane, .root{
+     -fx-background-color: #323232;     
+    -fx-base: #323232;
+}
+.tab, .button, .date-picker .arrow-button{
+    
+    -fx-base: goldenrod;
+}
+
+.button:disabled{
+    -fx-base: #323232;
+    -fx-background-color: transparent;
+    -fx-border-color: #444444;
+    -fx-border-radius: 5;
+    
+}
+
+.combo-box, .column-header-background, .button{
+     -fx-base: goldenrod;     
+}
+.combo-box-popup{    
+    -fx-base: #323232;
+}
+
+.context-menu{
+    -fx-base: #323232;    
+}
+.tooltip{    
+    -fx-text-fill: goldenrod;
+}
+
+#footPane{    
+    -fx-border-width: 1;
+    -fx-border-color:  #444444 transparent  transparent transparent;
+    -fx-background-color: #323232;
+}
+
+#titlePane{    
+    -fx-border-width: 1;
+    -fx-border-color:  transparent transparent  #444444 transparent;
+        -fx-background-color: #323232;
+}
+
+#centerPane{
+    -fx-background-color: #222222;
+}

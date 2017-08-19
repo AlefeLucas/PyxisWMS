@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootPane" fx:id="rootPane" minWidth="400.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.EditLoanController">
+      
+    <stylesheets>
+      <URL value="@/br/com/senaimg/wms/view/stylesheet/editloan.css" />
+    </stylesheets>
+   <children>
+      <BorderPane id="backgroundPane" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox id="footPane" fx:id="footPane" alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="buttonClean" fx:id="buttonSave" defaultButton="true" mnemonicParsing="false" onAction="#doneHandle" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+                  <Button id="buttonRequestAccess" fx:id="buttonCancel" cancelButton="true" mnemonicParsing="false" onAction="#cancelHandle" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <top>
+            <StackPane id="titlePane" fx:id="titlePane" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleLabel" styleClass="titleLabel" text="Edit Loan">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </top>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true">
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                     <content>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <StackPane id="cataloguePane" layoutX="15.0" layoutY="15.0" prefHeight="485.0" prefWidth="432.0">
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true">
+                                       <content>
+                                          <VBox minHeight="600.0">
+                                             <children>
+                                                <GridPane id="formGridPane" fx:id="formGridPaneSupplier11">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="230.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="300.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label fx:id="expLabel" layoutX="10.0" layoutY="89.0" text="Expected Return Date:" GridPane.rowIndex="1" />
+                                                      <Label fx:id="loanDateLabel" layoutX="10.0" layoutY="262.0" text="Loan Date:" />
+                                                      <Label fx:id="annotationLabel2" layoutX="15.0" layoutY="135.0" text="Annotations:" GridPane.rowIndex="3" />
+                                                      <TextArea fx:id="annotationTextArea2" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <tooltip>
+                                                            <Tooltip fx:id="annotationToolTip11" autoHide="true">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </Tooltip>
+                                                         </tooltip>
+                                                         <GridPane.margin>
+                                                            <Insets top="2.0" />
+                                                         </GridPane.margin>
+                                                      </TextArea>
+                                                      <DatePicker fx:id="loanDatePicker" GridPane.columnIndex="1" />
+                                                      <DatePicker fx:id="expDatePicker" layoutX="144.0" layoutY="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <DatePicker fx:id="returnDatePicker" layoutX="145.0" layoutY="48.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label fx:id="returnLabel" layoutX="15.0" layoutY="52.0" text="Return Date:" GridPane.rowIndex="2" />
+                                                      <Label fx:id="statusLabel" layoutX="15.0" layoutY="82.0" text="Status:" GridPane.rowIndex="4" />
+                                                      <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </StackPane>
+                              <StackPane id="cataloguePane" layoutX="10.0" layoutY="10.0" prefHeight="485.0" prefWidth="432.0">
+                                 <children>
+                                    <VBox>
+                                       <StackPane.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </StackPane.margin>
+                                       <children>
+                                          <Label fx:id="loanLabel2" text="Loan">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane BorderPane.alignment="TOP_LEFT">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="40.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="210.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label fx:id="filter3Label" text="Filter:" />
+                                                <TextField id="searchField" fx:id="searchProductLoan2" prefHeight="25.0" prefWidth="240.0" promptText="Search Product" GridPane.columnIndex="1" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </GridPane>
+                                          <TableView fx:id="loanTableView2" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                             <columns>
+                                                <TableColumn fx:id="mnemonicColumn3" minWidth="125.0" prefWidth="125.0" text="Mnemonic" />
+                                                <TableColumn fx:id="quantityColumn3" minWidth="60.0" prefWidth="60.0" text="Quantity" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootPane" fx:id="rootPane" minWidth="400.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../stylesheet/edititem.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.EditItemController">
+      
+    <stylesheets>
+        <URL value="@br/com/senaimg/wms/view/stylesheet/edititem.css" />
+    </stylesheets>
+    <children>
+        <VBox>
+            <children>
+                <StackPane id="titlePane" fx:id="titlePane">
+                    <children>
+                        <Label fx:id="titleLabel" styleClass="titleLabel" text="Edit item">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </StackPane>
+                <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="2000.0" prefViewportWidth="800.0">
+                    <content>
+                        <VBox fx:id="centerPane" minHeight="700.0">
+                            <children>
+                                <BorderPane>
+                                    <center>
+                                        <VBox maxWidth="480.0" BorderPane.alignment="CENTER_LEFT">
+                                            <children>
+                                                <GridPane id="formGridPane" fx:id="formGridPaneItem" BorderPane.alignment="TOP_LEFT">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="200.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label fx:id="mnemonicLabel" layoutX="10.0" layoutY="89.0" text="Mnemonic:" />
+                                                        <Label fx:id="descriptionLabel" layoutX="15.0" layoutY="22.0" text="Description:" GridPane.rowIndex="1" />
+                                                        <Label fx:id="brandLabel" layoutX="10.0" layoutY="262.0" text="Brand:" GridPane.rowIndex="2" />
+                                                        <Label fx:id="ean13Label" layoutX="10.0" layoutY="435.0" text="Bar Code (EAN13):" GridPane.rowIndex="5" />
+                                                        <Label fx:id="minimumQuantityLabel" layoutX="10.0" layoutY="184.0" text="Mininum quantity:" GridPane.rowIndex="6" />
+                                          <Label fx:id="itemTypeLabel" layoutX="15.0" layoutY="212.0" text="Item type:" GridPane.rowIndex="9" />
+                                          <Label fx:id="cautionLabel" layoutX="15.0" layoutY="87.0" text="Caution:" GridPane.rowIndex="10" />
+                                                        
+                                                        <TextField fx:id="mnemonicTextField" GridPane.columnIndex="1">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="mnemonicToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                                        <TextArea fx:id="descriptionTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                             <tooltip>
+                                                <Tooltip fx:id="descriptionToolTip">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font></Tooltip>
+                                             </tooltip></TextArea>
+                                                        <ComboBox fx:id="brandComboBox" prefHeight="25.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <TextField fx:id="ean13TextField" layoutX="169.0" layoutY="105.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="ean13ToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                          <Spinner fx:id="minimumQuantitySpinner" editable="true" prefHeight="25.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <children>
+                                                <ComboBox fx:id="itemTypeComboBox" prefHeight="25.0" prefWidth="190.0" promptText="Unspecified" />
+                                                <Button fx:id="unspecifyButton" mnemonicParsing="false" onAction="#unspecifyHandle" text="Unspecify">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <TextArea fx:id="cautionTextArea" layoutX="136.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                             <GridPane.margin>
+                                                <Insets bottom="2.0" top="2.0" />
+                                             </GridPane.margin>
+                                             <tooltip>
+                                                <Tooltip fx:id="cautionToolTip">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font></Tooltip>
+                                             </tooltip>
+                                          </TextArea>
+                                          <ComboBox fx:id="operationTypeComboBox" layoutX="136.0" layoutY="268.0" prefHeight="25.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <Label fx:id="operationTypeLabel" layoutX="15.0" layoutY="272.0" text="Operation type:" GridPane.rowIndex="8" />
+                                          <ComboBox fx:id="groupComboBox" layoutX="136.0" layoutY="143.0" prefHeight="25.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label fx:id="groupLabel" layoutX="15.0" layoutY="147.0" text="Group:" GridPane.rowIndex="3" />
+                                          <Spinner fx:id="maximumQuantitySpinner" editable="true" layoutX="136.0" layoutY="221.0" prefHeight="25.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Label fx:id="maximumQuantityLabel" layoutX="15.0" layoutY="225.0" text="Maximum quantity:" GridPane.rowIndex="7" />
+                                          <TextField fx:id="sellingTextField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <tooltip>
+                                                <Tooltip fx:id="sellingToolTip" autoHide="true">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Tooltip>
+                                             </tooltip>
+                                          </TextField>
+                                          <Label fx:id="sellingLabel" text="Selling Price:" GridPane.rowIndex="4" />
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                    <VBox.margin>
+                                                        <Insets bottom="10.0" left="20.0" top="25.0" />
+                                                    </VBox.margin>
+                                                </GridPane>
+                                                <Label fx:id="dimensionTitle" layoutX="30.0" layoutY="205.0" text="Dimensions">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                    <VBox.margin>
+                                                        <Insets left="20.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                                <GridPane id="formGridPaneAddress" fx:id="formGridPaneDimensions" layoutX="30.0" layoutY="232.0">
+                                                    <children>
+                                                        <Label fx:id="heightLabel" layoutX="10.0" layoutY="236.0" text="Height:" />
+                                                        <Label fx:id="widthLabel" layoutX="10.0" layoutY="288.0" text="Width:" GridPane.rowIndex="1" />
+                                                        <Label fx:id="lengthLabel" layoutX="10.0" layoutY="340.0" text="Length:" GridPane.rowIndex="2" />
+                                                        <Label fx:id="weightLabel" layoutX="10.0" layoutY="392.0" text="Weight:" GridPane.rowIndex="3" />
+                                                        <TextField fx:id="heightTextField" GridPane.columnIndex="1">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="heightToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                                        <TextField fx:id="widthTextField" layoutX="136.0" layoutY="19.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="widthToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                                        <TextField fx:id="lengthTextField" layoutX="136.0" layoutY="49.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="lengthToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                                        <TextField fx:id="weightTextField" layoutX="136.0" layoutY="79.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                            <tooltip>
+                                                                <Tooltip fx:id="weightToolTip" autoHide="true">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Tooltip>
+                                                            </tooltip>
+                                                        </TextField>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="134.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                                                    </columnConstraints>
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <VBox.margin>
+                                                        <Insets bottom="10.0" left="20.0" />
+                                                    </VBox.margin>
+                                                </GridPane>
+                                            </children>
+                                        </VBox>
+                                    </center>
+                                    <right>
+                                        <VBox fx:id="rightPane" alignment="TOP_CENTER" minHeight="440.0" prefWidth="300.0" styleClass="rightPane" BorderPane.alignment="TOP_CENTER">
+                                            <children>
+                                                <Label fx:id="imageLabel" text="Image" />
+                                                <Rectangle id="squareImage" fx:id="squareImage" arcHeight="5.0" arcWidth="5.0" fill="#949494" height="200.0" stroke="#ffffff00" strokeType="INSIDE" width="200.0">
+                                                    <VBox.margin>
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                    </VBox.margin>
+                                                </Rectangle>
+                                                <Button id="selectImageButton" fx:id="selectImageButton" mnemonicParsing="false" onAction="#selectImageHandle" text="Select..." />
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="25.0" top="25.0" />
+                                            </padding>
+                                            <BorderPane.margin>
+                                                <Insets top="10.0" />
+                                            </BorderPane.margin>
+                                        </VBox>
+                                    </right>
+                                </BorderPane>
+                                <Region VBox.vgrow="ALWAYS" />
+                            </children>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+                <HBox id="footPane" fx:id="footPane" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button id="buttonClean" fx:id="buttonClean" mnemonicParsing="false" onAction="#cleanHandle" text="Clean" />
+                        <Button id="buttonRequestAccess" fx:id="buttonSaveItem" mnemonicParsing="false" onAction="#saveItemHandle" text="Save">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>

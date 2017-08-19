@@ -1,0 +1,26 @@
+.myDialog, .root{
+     -fx-background-color: #f0f0f0;     
+    -fx-base: #f0f0f0;
+}
+.tab, .button{
+    
+    -fx-base: #0b8bb7;
+}
+.button:disabled{
+    -fx-base: #f0f0f0;
+    -fx-background-color: transparent;
+    -fx-border-color: #b0b0b0;
+    -fx-border-radius: 5;
+    
+}
+
+.combo-box, .column-header-background, .button{
+     -fx-base: #0b8bb7;     
+}
+.combo-box-popup{    
+    -fx-base: #f0f0f0;
+}
+
+.context-menu{
+    -fx-base: #f0f0f0;    
+}

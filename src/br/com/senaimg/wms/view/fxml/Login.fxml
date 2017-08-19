@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import br.com.senaimg.wms.language.*?>
+
+<StackPane id="rootPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.LoginController">
+    
+    <stylesheets>
+        <URL value="@/br/com/senaimg/wms/view/stylesheet/login.css" />
+    </stylesheets>
+    <children>
+        <StackPane id="backgroundPane1" fx:id="backgroundPane1" prefHeight="150.0" prefWidth="200.0" />         
+        <StackPane id="backgroundPane2" fx:id="backgroundPane2" prefHeight="150.0" prefWidth="200.0" />
+        <StackPane id="contentPane" fx:id="contentPane" prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <VBox id="loginPane" fx:id="loginPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                            <padding>
+                                <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                            </padding>
+                            <children>
+                                
+                                
+                                <Circle id="circleImage" fx:id="circleImage" fill="#ececec" radius="125.0" stroke="#ffffff00" strokeType="INSIDE">
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" />
+                                    </VBox.margin>
+                                </Circle>
+                                <TextField id="tfUser" fx:id="tfUser" promptText="Username" styleClass="logininput">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </TextField>
+                                <PasswordField id="pfPassword" fx:id="pfPassword" promptText="Password" styleClass="logininput">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </PasswordField>
+                                <Button id="loginButton" fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonHandle" prefHeight="48.0" prefWidth="300.0" styleClass="buttonAll" text="Log In">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <HBox fx:id="linkPane" minHeight="60.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Hyperlink fx:id="hpPasswordRecovery" alignment="CENTER" onAction="#callPasswordRecovery" text="Password Recovery" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Hyperlink>
+                                        <Region prefHeight="200.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                                        <Hyperlink fx:id="hpAccessReq" alignment="CENTER" onAction="#callAccessRequest" text="Access Request" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Hyperlink>
+                                    </children>
+                                </HBox>
+                                
+                                
+                                
+                                <Text fx:id="textWarning" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username or password is incorrect. Try again." textAlignment="CENTER" wrappingWidth="350.0">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="25.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonHandle" prefHeight="48.0" prefWidth="150.0" styleClass="buttonAll" text="OK">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </center>
+                    <right>
+                        <VBox alignment="BOTTOM_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/senailogo256.png" />
+                                    </image>
+                                    <VBox.margin>
+                                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                    </right>
+                    <bottom>
+                        <Region BorderPane.alignment="CENTER" />
+                    </bottom>
+                    <left>
+                        <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fitHeight="128.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/wmsicon256.png" />
+                                    </image>
+                                    <VBox.margin>
+                                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                    </left>
+                    <top>
+                        <Region BorderPane.alignment="CENTER" />
+                    </top>
+                </BorderPane>
+            </children>
+        </StackPane>
+    </children>
+</StackPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="rootPane" fx:id="rootPane" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.HomeController">
+    <stylesheets>
+        <URL value="@/br/com/senaimg/wms/view/stylesheet/home.css" />
+    </stylesheets>
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar fx:id="menuBar">
+                    <menus>
+                        <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+                            <items>
+                        <MenuItem fx:id="settingsMenuItem" mnemonicParsing="false" onAction="#settingsHandle" text="Settings" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exit" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuTab" mnemonicParsing="false" text="Tabs" />
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                        <MenuItem mnemonicParsing="false" onAction="#manualHandle" text="User Manual" />
+                        <MenuItem mnemonicParsing="false" onAction="#aboutItemHandle" text="About Pyxis WMS" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ToolBar id="tool" fx:id="toolBar" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="pyxisLogo" fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pyxis128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER">
+                     <children>
+                            <Label fx:id="userLabel" text="User" />
+                        <Circle id="circleImage" fx:id="userImageCircle" fill="#ececec" radius="25.0" stroke="#ffffff00" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <MenuButton id="menuButtonUser" fx:id="userMenuButton" mnemonicParsing="false" text="...">
+                          <items>
+                            <MenuItem fx:id="userAccountItem" mnemonicParsing="false" onAction="#myAccountHandle" text="My account" />
+                            <MenuItem fx:id="logOutItem" mnemonicParsing="false" onAction="#logOutHandle" text="Log Out" />
+                          </items>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                    </items>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+   <bottom>
+      <HBox fx:id="footerPane" alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="copyrightLabel" text="Álefe Lucas - Leandro Gregório - João Victor - Rebecca Tuller">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" />
+               </padding>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="copyrightLabel1" layoutX="608.0" layoutY="10.0" text="Copyright 2016 Pyxis WMS © - Trabalho de Inovação - Tecnico em Informatica - SENAI Cetem">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0">
+              <tabs>
+                <Tab fx:id="dashboardTab" closable="false" text="Home">
+                     <content>
+                        <ScrollPane fx:id="scrollPane" fitToHeight="true" pannable="true" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="hBoxDashGroups" prefHeight="100.0" prefWidth="200.0" />
+                           </content>
+                        </ScrollPane>
+                     </content>
+                </Tab>
+              </tabs>
+               <StackPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </StackPane.margin>
+            </TabPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

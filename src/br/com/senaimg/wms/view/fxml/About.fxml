@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootPane" fx:id="rootPane" prefHeight="415.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.AboutController">
+    <stylesheets>
+              <URL value="@/br/com/senaimg/wms/view/stylesheet/about.css" />
+          </stylesheets>
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <ImageView fx:id="pyxisLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pyxis256.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Pyxis WMS">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/senailogo256.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="70.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="© 2016, Pyxis">
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="30.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="aboutTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" text="Product Version&#10;Pyxis WMS 1.0&#10;&#10;Build Information&#10;Version: 1.0-b13, &#10;Date: 2016-04-26 11:00&#10;&#10;Logging&#10;The default configuration stores logging output in a file named pyxiswms-1.0.log (possibly followed by a trailing '.' and a digit).&#10;The default file path is C:\Users\LEFELU~1\AppData\Local\Temp\pyxiswms-1.0.log&#10;&#10;JavaFX&#10;Toolkit = QuantumToolkit&#10;Pipeline = D3DPipeline&#10;Hardware acceleration ENABLED&#10;&#10;Java&#10;1.8.0-b132, Oracle Corporation&#10;&#10;Operating System&#10;Windows 8, x86, 6.2&#10;&#10;Copyright © 2016 Pyxis and/or its affiliates. All rights reserved.&#10;&#10;This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.&#10;&#10;The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.&#10;&#10;If this software or related documentation is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, the following notice is applicable:&#10;&#10;U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S. Government customers are &quot;commercial computer software&quot; or &quot;commercial technical data&quot; pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, the use, duplication, disclosure, modification, and adaptation shall be subject to the restrictions and license terms set forth in the applicable Government contract, and, to the extent applicable by the terms of the Government contract, the additional rights set forth in FAR 52.227-19, Commercial Computer Software License (December 2007). Oracle USA, Inc., 500 Oracle Parkway, Redwood City, CA 94065.&#10;&#10;This software is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications which may create a risk of personal injury. If you use this software in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure the safe use of this software. Oracle and its affiliates disclaim any liability for any damages caused by use of this software in dangerous applications.&#10;&#10;Oracle is a registered trademark of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.&#10;&#10;This software and documentation may provide access to or information on content, products, and services from third parties. Oracle and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services. Oracle and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services." wrapText="true" />
+               </children>
+            </StackPane>
+         </center>
+         <StackPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </StackPane.margin>
+      </BorderPane>
+   </children>
+</StackPane>

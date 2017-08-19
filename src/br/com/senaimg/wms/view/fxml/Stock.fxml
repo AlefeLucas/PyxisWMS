@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootTabPane" fx:id="rootTabPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.StockController">
+    <stylesheets>
+        <URL value="@/br/com/senaimg/wms/view/stylesheet/stock.css" />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="200.0">
+         <top>
+            <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="575.0" layoutY="10.0" orientation="VERTICAL" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Separator orientation="VERTICAL" />
+                  <Label fx:id="filterLabel" alignment="CENTER" text="Filter:" />
+                  <ComboBox fx:id="filterComboBox" prefWidth="120.0" />
+                  <TextField id="searchField" fx:id="searchTextField" promptText="Search" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="itemTableView">
+                     <columns>
+                        <TableColumn fx:id="mnemonicColumn" minWidth="150.0" prefWidth="75.0" text="Mnemonic" />
+                        <TableColumn fx:id="groupColumn" minWidth="100.0" prefWidth="75.0" text="Group" />
+                        <TableColumn fx:id="brandColumn" minWidth="125.0" prefWidth="75.0" text="Brand" />
+                        <TableColumn fx:id="descriptionColumn" minWidth="300.0" prefWidth="75.0" text="Description" />
+                        <TableColumn fx:id="quantityInStockColumn" minWidth="130.0" prefWidth="75.0" text="Quantity in Stock" />
+                        <TableColumn fx:id="minQuantityColumn" minWidth="130.0" prefWidth="75.0" text="Minimum Quantity" />
+                        <TableColumn fx:id="maxQuantityColumn" minWidth="130.0" prefWidth="75.0" text="Maximum Quantity" />
+                        <TableColumn fx:id="totalCostsColumn" minWidth="130.0" prefWidth="75.0" text="Total Costs" />
+                        <TableColumn fx:id="avgCostColumn" minWidth="130.0" prefWidth="75.0" text="Selling Price" />
+                        <TableColumn fx:id="profitMarginColumn" minWidth="130.0" prefWidth="75.0" text="Profit Margin" />
+                        <TableColumn fx:id="sellingPriceColumn" minWidth="130.0" prefWidth="75.0" text="Average Cost" />
+                        <TableColumn fx:id="totalCostOutColumn" minWidth="130.0" prefWidth="75.0" text="Total Cost Out" />
+                        <TableColumn fx:id="totalProfitExpectancyColumn" minWidth="130.0" prefWidth="75.0" text="Total Profit Expectancy" />
+                        <TableColumn fx:id="avgIndividualProfitExpectancyColumn" minWidth="130.0" prefWidth="75.0" text="Average Individual Profit Expectancy" />
+                        <TableColumn fx:id="ean13Column" minWidth="125.0" prefWidth="75.0" text="Bar code (Ean13)" />
+                        <TableColumn fx:id="operationTypeColumn" minWidth="125.0" prefWidth="75.0" text="Operation Type" />
+                        <TableColumn fx:id="itemTypeColumn" minWidth="125.0" prefWidth="75.0" text="Item Type" />
+                        <TableColumn fx:id="cautionColumn" minWidth="300.0" prefWidth="75.0" text="Caution" />
+                        <TableColumn fx:id="heightColumn" minWidth="100.0" prefWidth="75.0" text="Height" />
+                        <TableColumn fx:id="widthColumn" minWidth="100.0" prefWidth="75.0" text="Width" />
+                        <TableColumn fx:id="lengthColumn" minWidth="100.0" prefWidth="75.0" text="Length" />
+                        <TableColumn fx:id="weightColumn" minWidth="100.0" prefWidth="75.0" text="Weight" />
+                     </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </StackPane>
+         </center>
+         <left>
+            <StackPane prefHeight="150.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label fx:id="groupsLabel" text="Groups">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TreeView fx:id="groupsTreeView" styleClass="item-list" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="brandsLabel" layoutX="10.0" layoutY="10.0" text="Brands">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="brandsListView" styleClass="item-list" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </StackPane>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

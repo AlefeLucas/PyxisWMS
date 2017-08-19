@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pyxis_wms?createDatabaseIfNotExist=true</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">admin</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="br.com.senaimg.wms.model.location.Address"/>
+    <mapping class="br.com.senaimg.wms.model.location.City"/>
+    <mapping class="br.com.senaimg.wms.model.location.State"/>
+    <mapping class="br.com.senaimg.wms.model.location.Country"/>
+    <mapping class="br.com.senaimg.wms.model.contact.Contact"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.User"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.ImageFile"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.Profile"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.SecQuestion"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.Functionality"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.FunctionalityGroup"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.Permission"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.agent.Supplier"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.agent.Catalogue"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.agent.Customer"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.ItemDimension"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.place.Hall"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.place.Rack"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.place.RackFloor"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.place.Pallet"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.Stock"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.Batch"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.Brand"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.Item"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.ItemDimension"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.ItemGroup"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.MetaItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.ItemType"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.stock.item.OperationType"/>
+    <mapping class="br.com.senaimg.wms.model.sistema.Settings"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.Purchase"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.Sale"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.Loan"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.LoanHasItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.LoanHasMetaItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.PurchaseHasItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.SaleHasItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.PurchaseHasMetaItem"/>
+    <mapping class="br.com.senaimg.wms.model.warehouse.process.SaleHasMetaItem"/>
+  </session-factory>
+</hibernate-configuration>

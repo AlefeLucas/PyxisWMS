@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="rootPane" fx:id="rootPane" minWidth="400.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senaimg.wms.view.controller.EditPurchaseController">
+      
+    <stylesheets>
+      <URL value="@/br/com/senaimg/wms/view/stylesheet/editpurchase.css" />
+    </stylesheets>
+   <children>
+      <BorderPane id="backgroundPane" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <HBox id="footPane" fx:id="footPane" alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="buttonClean" fx:id="buttonSave" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#doneHandle" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+                  <Button id="buttonRequestAccess" fx:id="buttonCancel" cancelButton="true" mnemonicParsing="false" onAction="#cancelHandle" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <top>
+            <StackPane id="titlePane" fx:id="titlePane" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleLabel" styleClass="titleLabel" text="Edit Purchase">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </top>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <GridPane id="formGridPane" fx:id="formGridPaneSupplier11">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="341.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label id="emailLabel" fx:id="expLabel" layoutX="10.0" layoutY="89.0" text="Expected Delivery Date:" GridPane.rowIndex="1" />
+                              <Label id="phoneLabel" fx:id="orderLabel" layoutX="10.0" layoutY="262.0" text="Order Date:" />
+                              <Label id="genderLabel" fx:id="paymentLabel" layoutX="10.0" layoutY="184.0" text="Payment Conditions:" GridPane.rowIndex="3" />
+                              <Label id="genderLabel" fx:id="annotationLabel" layoutX="15.0" layoutY="135.0" text="Annotations:" GridPane.rowIndex="4" />
+                              <TextArea fx:id="annotationTextArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <tooltip>
+                                    <Tooltip fx:id="annotationToolTip" autoHide="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <GridPane.margin>
+                                    <Insets top="2.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <DatePicker fx:id="orderDatePicker" GridPane.columnIndex="1" />
+                              <DatePicker fx:id="expDatePicker" layoutX="144.0" layoutY="45.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextArea fx:id="paymentTextArea" layoutX="144.0" layoutY="135.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <tooltip>
+                                    <Tooltip fx:id="paymentToolTip" autoHide="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <Label id="genderLabel" fx:id="situationLabel" layoutX="15.0" layoutY="217.0" text="Situation:" GridPane.rowIndex="6" />
+                              <Label id="genderLabel" fx:id="processLabel" layoutX="15.0" layoutY="282.0" text="Process:" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="processComboBox" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="situationComboBox" layoutX="300.0" layoutY="278.0" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <DatePicker fx:id="deliveryDatePicker" layoutX="300.0" layoutY="48.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label id="emailLabel" fx:id="deliveryLabel" layoutX="15.0" layoutY="52.0" text="Delivery Date:" GridPane.rowIndex="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
